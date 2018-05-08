@@ -29,6 +29,7 @@ inc-y   =../include/
 #                 are regareded as files. The files with specified suffixes in those directories will
 #                 be automatically involved in compilation.
 src-y   =../src/\
+		../src/sort/\
 		../test/
 # obj-y:          Extra object file list.
 # ucmd_X:         User defined command to generate targets for the prerequisites

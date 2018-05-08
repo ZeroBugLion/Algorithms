@@ -18,12 +18,12 @@ TEST(SORT,MergeSort_OK)
     int arrayExpect[8]={1,2,2,3,4,5,6,7};
 
     PrintSequence(arrayInput,8);
-    MergeSort(arrayInput,0,8);
+    MergeSort(arrayInput,0,7);
     PrintSequence(arrayInput,8);
     EXPECT_EQ(true,IsSequenceEqual(arrayInput,arrayExpect,8));
 }
 
-/*
+
 TEST(SORT,HeapSort_OK)
 {
     int arrayInput[10]={16,14,10,8,7,9,3,2,4,1};
@@ -34,7 +34,21 @@ TEST(SORT,HeapSort_OK)
     PrintSequence(arrayInput,10);
     EXPECT_EQ(true,IsSequenceEqual(arrayInput,arrayExpect,10));
 }
-*/
+
+
+
+TEST(SORT,QuitSort_OK)
+{
+    int arrayInput[8]={2,8,7,1,3,5,6,4};
+    int arrayExpect[8]={1,2,3,4,5,6,7,8};
+
+    PrintSequence(arrayInput,8);
+    QuitSort(arrayInput,0,7);
+    PrintSequence(arrayInput,8);
+    EXPECT_EQ(true,IsSequenceEqual(arrayInput,arrayExpect,8));
+}
+
+
 
 
 
