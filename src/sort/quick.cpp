@@ -3,17 +3,17 @@
 
 int Partition(int *sequence,int from,int to)
 {
-    int pivot = sequence[to - 1];
-    int i = from;
-    for(int iTmp = from;iTmp < to - 2;iTmp++)
+    int pivot = sequence[to];
+    int i = from - 1;
+    for(int iTmp = from;iTmp <= to - 1;iTmp++)
     {
         if(sequence[iTmp] <= pivot)
         {
-            i = i + 1;
+            i++;
             EXCHANGE(sequence[i],sequence[iTmp]);
         }
     }
-    EXCHANGE(sequence[i + 1],sequence[to - 1]);
+    EXCHANGE(sequence[i + 1],sequence[to]);
     return i + 1;
 }
 
@@ -23,7 +23,7 @@ void QuitSort(int *sequence,int from,int to)
     if (from < to)
     {
         int mid = Partition(sequence,from,to);
-        QuitSort(sequence,from,mid);
+        QuitSort(sequence,from,mid -1);
         QuitSort(sequence,mid + 1,to);
     }
 
